@@ -239,4 +239,4 @@ When searching for specific strings or patterns in a file or block of text, regu
    ```
 
 ## Author
-This cheatsheet is written by **Purva Patel**
+This cheatsheet is created by **Purva Patel**.
