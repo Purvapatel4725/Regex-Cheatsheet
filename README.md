@@ -124,30 +124,59 @@ When searching for specific strings or patterns in a file or block of text, regu
    cats{4}
    ```
 
-3. **Match words `Cat`, `cats`, `catsss`:**
+2. **Match words `Cat`, `cats`, `catsss`:**
 
    ```regex
    [Cc]ats*
    ```
 
-4. **Match sentences `regex go br`, `regex go brrrrrr`:**
+3. **Match sentences `regex go br`, `regex go brrrrrr`:**
 
    ```regex
    regex go br+
    ```
 
-5. **Match filenames `ab0001`, `bb0000`, `abc1000`, `cba0110`, `c0000`:**
+4. **Match filenames `ab0001`, `bb0000`, `abc1000`, `cba0110`, `c0000`:**
 
    ```regex
    [abc]{1,3}[01]{4}
    ```
 
-6. **Match filenames `File01`, `File2`, `file12`, `File20`, `File99`:**
+5. **Match filenames `File01`, `File2`, `file12`, `File20`, `File99`:**
 
    ```regex
    [Ff]ile\d{1,2}
    ```
 
+6. **Match all of the following folder names: `kali tools`, `kali     tools`:**
+
+   ```regex
+   kali\s+tools
+   ```
+
+7. **Match all of the following filenames: `notes~`, `stuff@`, `gtfob#`, `lmaoo!`:**
+
+   ```regex
+   \w{5}\W
+   ```
+
+8. **Match the string in quotes (use the `*` sign and the `\s`, `\S` metacharacters): `"2f0h@f0j0%!     a)K!F49h!FFOK"`:**
+   
+   ```regex
+   \S*\s*\S*
+   ```
+
+9. **Match every 9-character string (with letters, numbers, and symbols) that doesn't end in a "!" sign:**
+   
+   ```regex
+   \S{8}[^!]
+   ```
+
+10. **Match all of these filenames (use the `+` symbol): `.bash_rc`, `.unnecessarily_long_filename`, and `note1`:**
+   
+    ```regex
+    \.?[\w_]+
+    ```
 
 ## Start/End Patterns, Groups, and Either/Or
 ### Start/End Characters
@@ -183,25 +212,27 @@ When searching for specific strings or patterns in a file or block of text, regu
    EOF\$$
    ```
 
-5. **Match sentences `I use nano` and `I use vim`:**
+5. **Match sentences:**                                                                                                                                                        
+   `I use vim`                                                                                                                                                                                          
+   `I use nano`
 
    ```regex
    I use (nano|vim)
    ```
 
-6. **Match lines starting with `$` followed by a digit, another `$`, and non-whitespace characters:**
+7. **Match lines starting with `$` followed by a digit, another `$`, and non-whitespace characters:**
 
    ```regex
    \$\d\$\S+
    ```
 
-7. **Match any IPv4 address:**
+8. **Match any IPv4 address:**
 
    ```regex
    (\d{1,3}\.){3}\d{1,3}
    ```
 
-8. **Match emails `hello@tryhackme.com`, `username@domain.com`, `dummy_email@xyz.com` and group the username and domain:**
+9. **Match emails `hello@tryhackme.com`, `username@domain.com`, `dummy_email@xyz.com` and group the username and domain:**
    
    ```regex
    (\w+)@(\w+)\.com
