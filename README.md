@@ -71,30 +71,35 @@ When searching for specific strings or patterns in a file or block of text, regu
    .at
    ```
 
-3. **Match words `Cat`, `cats`:**
+2. **Match words `Cat`, `cats`:**
 
    ```regex
    [Cc]ats?
    ```
 
-4. **Match domain name `cat.xyz`:**
+3. **Match domain name `cat.xyz`:**
 
    ```regex
    cat\.xyz
    ```
 
-5. **Match domain names `cat.xyz`, `cats.xyz`, `hats.xyz`:**
+4. **Match domain names `cat.xyz`, `cats.xyz`, `hats.xyz`:**
 
    ```regex
    [ch]ats?\.xyz
    ```
 
-6. **Match 4-letter strings not ending with letters `n` to `z`:**
+5. **Match 4-letter strings not ending with letters `n` to `z`:**
 
    ```regex
    ...[^n-z]
    ```
 
+6. **Match `bat`, `bats`, `hat`, `hats`, but not `rat` or `rats` (use the hat symbol)**
+
+   ```regex
+   [^r]ats?
+   ```   
 
 ## Metacharacters and Repetitions
 ### Basic Metacharacters
