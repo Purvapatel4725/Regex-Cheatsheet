@@ -29,7 +29,7 @@ When searching for specific strings or patterns in a file or block of text, regu
    - Be specific: Use `[a-c]` instead of `[a-z]` if only matching 'a' to 'c'.
    - Don't be too specific: Use `[a-z]` for a broader range to avoid complexity.
 
-## Practical Examples
+## Examples
 1. **Match characters `c`, `o`, `g`:**
 
    ```regex
@@ -64,7 +64,7 @@ When searching for specific strings or patterns in a file or block of text, regu
 - `.`: Matches any single character except the line break.
 - `?`: Makes the preceding character optional.
 
-### Practical Examples
+### Examples
 1. **Match words `Cat`, `fat`, `hat`, `rat`:**
 
    ```regex
@@ -112,7 +112,7 @@ When searching for specific strings or patterns in a file or block of text, regu
 - `*`: Matches 0 or more times.
 - `+`: Matches 1 or more times.
 
-### Practical Examples
+### Examples
 1. **Match word `catssss`:**
 
    ```regex
@@ -153,55 +153,52 @@ When searching for specific strings or patterns in a file or block of text, regu
 - `(pattern)`: Defines a group.
 - `|`: Specifies an either/or pattern.
 
-### Practical Examples
+### Examples
 1. **Match string starting with "Password:" followed by 10 characters excluding "0":**
 
    ```regex
    Password:[^0]{10}
    ```
 
-3. **Match "username: " at the beginning of a line:**
+2. **Match "username: " at the beginning of a line:**
 
    ```regex
    ^username:\s
    ```
 
-4. **Match lines not starting with a digit:**
+3. **Match lines not starting with a digit:**
 
    ```regex
    ^\D
    ```
 
-5. **Match string `EOF$` at the end of a line:**
+4. **Match string `EOF$` at the end of a line:**
 
    ```regex
    EOF\$$
    ```
 
-6. **Match sentences `I use nano` and `I use vim`:**
+5. **Match sentences `I use nano` and `I use vim`:**
 
    ```regex
    I use (nano|vim)
    ```
 
-7. **Match lines starting with `$` followed by a digit, another `$`, and non-whitespace characters:**
+6. **Match lines starting with `$` followed by a digit, another `$`, and non-whitespace characters:**
 
    ```regex
    \$\d\$\S+
    ```
 
-8. **Match any IPv4 address:**
+7. **Match any IPv4 address:**
 
    ```regex
    (\d{1,3}\.){3}\d{1,3}
    ```
 
-10. **Match emails `hello@tryhackme.com`, `username@domain.com`, `dummy_email@xyz.com` and group the username and domain:**
+8. **Match emails `hello@tryhackme.com`, `username@domain.com`, `dummy_email@xyz.com` and group the username and domain:**
    
    ```regex
    (\w+)@(\w+)\.com
+   ```
 
-
----
-
-This cheatsheet provides a comprehensive guide to regular expressions, ensuring you can effectively search and manipulate text patterns. 
