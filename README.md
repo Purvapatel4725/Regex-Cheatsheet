@@ -22,7 +22,7 @@ When searching for specific strings or patterns in a file or block of text, regu
 - `[^k]ing`: Matches 'ring', 'sing', '$ing', but not 'king'.
 - `[^a-c]at`: Matches 'fat' and 'hat', but not 'bat' or 'cat'.
 
-### Notes
+### Note that
 1. Charsets match any occurrence of the specified characters, not just strings.
 2. Type characters in the same order as the questions to avoid confusion.
 3. Efficient regex means:
